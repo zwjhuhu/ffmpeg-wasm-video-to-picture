@@ -1,4 +1,6 @@
-## 借助ffmpeg + wasm实现网页截取视频帧功能
+## 修改一个ffmpeg + wasm实现网页逐帧绘制视频的功能，只是测试用的，想要实际使用必须精简，同时提高效率，移动端无法实时
+
+### 使用的ffmpeg版本是n3.4.5
 
 ### 1. cfile/simple.c  
 这个是纯C处理，把一个视频的第一帧保存为pcm图片，编译方法：
@@ -28,4 +30,4 @@ emcc web.c process.c ../lib/libavformat.bc ../lib/libavcodec.bc ../lib/libswscal
 # npm install -g http-server
 http-server
 ```
-然后访问http://localhost:8080/main.html
+然后访问http://localhost:8080/index.html
